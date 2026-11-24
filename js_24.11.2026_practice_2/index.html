@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Рабочие дни 
+    <div id="workDays"></div>
+
+    Выходные дни
+    <div id="holiDays"></div>
+
+    <script>
+        let days = [{name: "Sunday", isWorkDay: false },
+            {name: "Monday", isWorkDay: true},
+            {name: "Tuesday", isWorkDay: true},
+            {name: "Wednesday", isWorkDay: true},
+            {name: "Thursday", isWorkDay: true},
+            {name: "Friday", isWorkDay: true},
+            {name: "Saturday", isWorkDay: false}
+        ];
+
+        let workDays = document.querySelector("#workDays");
+        let holiDays = document.querySelector("#holiDays");
+
+        for(let i = 0; i < days.length; i++) {
+            const currentDay = days[i];
+            let p = document.createElement("p");
+            p.textContent = currentDay.name;
+
+            if (currentDay.isWorkDay == true) {
+                workDays.append(p);
+            }
+
+            else {
+                holiDays.append(p);
+            }
+        }
+
+
+    </script>
+</body>
+</html>

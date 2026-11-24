@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let source = [
+            {
+                month: "Январь",
+                amount: 20
+            },
+            {
+                month: "Февраль",
+                amount: 140
+            },
+            {
+                month: "Март",
+                amount: 115
+            },
+            {
+                month: "Апрель",
+                amount: 180
+            },
+            {
+                month: "Март",
+                amount: 80
+            },
+            {
+                month: "Июнь",
+                amount: 90
+            },
+            {
+                month: "Июль",
+                amount: 100
+            }
+        ];
+
+        let table = document.createElement("table");
+
+        for (let i = 0; i < source.length; i++) {
+            const currentSource = source[i];
+
+            let t = document.createElement("tr");
+            let a = document.createElement("td");
+            let b = document.createElement("td");
+
+            a.textContent = currentSource.month;
+            b.textContent = currentSource.amount;
+
+            t.append(a);
+            t.append(b);
+            table.append(t);
+        }
+
+        document.body.append(table);
+    </script>
+</body>
+</html>
